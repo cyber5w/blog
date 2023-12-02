@@ -23,12 +23,12 @@ footer-links:
   flickr:
   github: barryclark/jekyll-now
   instagram:
-  linkedin: https://www.linkedin.com/company/cyber5w/
+  linkedin: /company/cyber5w/
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: cyber5w
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: binaryz0ne # channel/<your_long_string> or user/<user-name>
+  youtube: https://youtube.com/@binaryz0ne?si=OmxMSkxtT6gf2qNz # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
 
