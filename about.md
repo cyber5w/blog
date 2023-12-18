@@ -8,7 +8,7 @@ EXPERT DIGITAL FORENSICS TRAINING & Consulting!
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+ We are a team of digital forensics specialists dedicated to helping businesses, law enforcement, and individuals understand and investigate cyber crime. We love solving puzzles, teaching, and asking questions – which is why "5W" is part of our company's name.    
 
 ### Contact me
 
