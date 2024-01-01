@@ -5,6 +5,8 @@ title: Malware Analysis - How to bypass Anti-Debugging Tricks - part 1
 
 Today, we will show how to bypass Anti-Debugging trick of our simple malware written in C/C++. There are different characteristics that serve as indicators that a malware analyst is conducting a manual inspection of the malicious application. Malware authors can avoid this by checking for these characteristics, which also impede the analyst's ability to reverse-engineer the malware code.     
 
+![debug]({{ site.baseurl }}/images/4/2024-01-01_12-45.png)    
+
 ### IsDebuggerPresent
 
 For example anti-debugging techniques identify whether a program is being executed under the influence of a debugger. The function `IsDebuggerPresent()` is enabled via the kernel32.dll library. This function is frequently employed in malicious software to complicate reverse engineering, as it alters the program's flow when examined in a user-mode debugger, such as x32dbg, which is the most widely used anti-debugging method in Windows:    
