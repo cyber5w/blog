@@ -67,6 +67,8 @@ Be cautious that the output of `IsDebuggerPresent` is saved in `eax` if you sear
 
 ![debug]({{ site.baseurl }}/images/4/2024-01-01_11-51.png)    
 
+![debug]({{ site.baseurl }}/images/4/2024-01-02_00-32.png)    
+
 That is straightforward logic: the debugger detection alerted if the return value is `1` and is stored in `eax`. To evade `IsDebuggerPresent` detection, replace `je` with `jmp` press the space keyboard and `jmp` assembly. (process of patching):    
 
 ![debug]({{ site.baseurl }}/images/4/2024-01-01_11-59.png)    
