@@ -61,6 +61,13 @@ Note that, certain detection tools and antivirus engines have the capability to 
 
 ![mem]({{ site.baseurl }}/images/5/2024-01-02_11-20.png)    
 
+It's a popular trick of malware authors when use process injection technique:    
+
+```cpp
+//allocate memory buffer for remote process
+remoteBuffer = VirtualAllocEx(processHandle, NULL, payloadSize, (MEM_RESERVE | MEM_COMMIT), PAGE_EXECUTE_READWRITE);
+```
+
 As you can see, we found memory section where `hack.exe` injected payload `fc 48 81....` to `notepad.exe`.    
 
 ![mem]({{ site.baseurl }}/images/5/2024-01-02_11-19_1.png)    
