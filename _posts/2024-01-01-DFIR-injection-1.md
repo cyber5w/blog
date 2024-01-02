@@ -79,10 +79,13 @@ Finally, if we search our bytes `fc 48 81 e4`:
 
 we found our payload bytes.    
 
+We hope this post spreads awareness to the blue teamers of this interesting and useful tools, and can be good start for Digital Forensics path. Of course, also this post is useful for entry level cybersec specialists.     
+
 ### References
 
 [https://github.com/volatilityfoundation/volatility3](https://github.com/volatilityfoundation/volatility3)    
 [https://github.com/Velocidex/WinPmem](https://github.com/Velocidex/WinPmem)    
+[Cyber5W Intro to forensics](https://academy.cyber5w.com/collections/intro-to-forensics)    
 
 Thanks for your time happy hacking and good bye!   
 *PS. All drawings and screenshots are Cyber 5W*    
