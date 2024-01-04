@@ -2,7 +2,7 @@
 title:  "Welcome to Cyber5W"
 date:   2023-12-02 05:00:00 +0300
 header:
-  teaser: "/blog/assets/images/1/welcome.png"
+  teaser: "/assets/images/1/welcome.png"
 categories: 
   - dfir
 tags:

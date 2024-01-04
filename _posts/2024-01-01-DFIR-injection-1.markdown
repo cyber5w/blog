@@ -2,7 +2,7 @@
 title:  "Memory Forensics - Practical example, detect classic remote process injection"
 date:   2023-12-03 05:00:00 +0300
 header:
-  teaser: "/blog/assets/images/5/2024-01-02_13-37.png"
+  teaser: "/assets/images/5/2024-01-02_13-37.png"
 categories: 
   - forensics
 tags:
