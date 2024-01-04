@@ -1,0 +1,18 @@
+---
+title:  "Welcome to Cyber5W"
+date:   2023-12-02 05:00:00 +0300
+header:
+  teaser: "/assets/images/1/welcome.png"
+categories: 
+  - dfir
+tags:
+  - blueteam
+  - malware
+  - threat-hunting
+  - debugging
+---
+Just testing the blog and welcome post.
+
+![welcome](/assets/images/1/welcome.png)
+
+Thank you!
