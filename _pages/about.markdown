@@ -15,4 +15,4 @@ You can find us at GitHub:
 [Cyber5W](https://github.com/cyber5w)
 
 Contact Us:    
-[info @ cyber 5w dot com][mailto: info @ cyber 5w . com]
+[info @ cyber 5w dot com](mailto:info@cyber5w.com)
