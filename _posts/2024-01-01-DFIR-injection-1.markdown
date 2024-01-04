@@ -87,7 +87,7 @@ First of all, the code appears to be position-independent, as evident from the r
 
 Looks like the following assembly instructions involve system calls, accessing the Process Environment Block (PEB), and manipulating thread information:   
 
-```asm
+```nasm
 0x2b0017:	mov	rdx, qword ptr gs:[rdx + 0x60]
 0x2b001c:	mov	rdx, qword ptr ds:[rdx + 0x18]
 0x2b0021:	mov	rdx, qword ptr ds:[rdx + 0x20]
