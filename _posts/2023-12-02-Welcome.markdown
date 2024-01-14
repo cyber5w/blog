@@ -6,10 +6,13 @@ header:
 categories: 
   - dfir
 tags:
-  - blueteam
+  - dfir
   - malware
-  - threat-hunting
+  - blueteam
   - debugging
+  - threat-hunting
+  - investigations
+  - general
 ---
 # Welcome to Cyber5W: Your Gateway to the World of Digital Forensics!
 
