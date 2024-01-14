@@ -1,5 +1,5 @@
 ---
-title:  "Malware Analysis - How to bypass Anti-Debugging Tricks - part 1"
+title:  "Malware Analysis - How to Bypass Anti-Debugging Tricks - Part 1"
 date:   2023-12-03 05:00:00 +0300
 header:
   teaser: "/assets/images/4/2024-01-01_12-45.png"
