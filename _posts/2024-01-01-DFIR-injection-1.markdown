@@ -1,5 +1,5 @@
 ---
-title:  "Memory Forensics - Practical example, detect classic remote process injection"
+title:  "Memory Forensics - Practical Example, Detect Classic Remote Process Injection"
 date:   2024-01-01 05:00:00 +0300
 header:
   teaser: "/assets/images/5/2024-01-02_13-37.png"
