@@ -1,5 +1,5 @@
 main:
+  - title: "Academy"
+    url: https://academy.cyber5w.com/
   - title: "About"
     url: /about/
-  - title: "Academy"
-    url: /academy/
