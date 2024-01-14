@@ -14,6 +14,8 @@ tags:
   - investigations
   - general
 ---
+![welcome](/blog/assets/images/1/welcome.png)
+
 # Welcome to Cyber5W: Your Gateway to the World of Digital Forensics!
 
 Greetings, cyber detectives and aspiring investigators! We are thrilled to have you step through the digital doors of Cyber5W, your one-stop shop for all things digital forensics. Whether you're a seasoned professional looking to sharpen your skills or a curious newcomer eager to unravel the mysteries of the digital world, we have something for you.
@@ -38,7 +40,5 @@ We hope this blog post serves as a warm welcome to Cyber5W. Feel free to adapt a
 We wish you all the best in your digital forensics endeavors!
 
 P.S. Don't forget to follow us on social media for the latest updates, industry insights, and exclusive learning opportunities!
-
-![welcome](/blog/assets/images/1/welcome.png)
 
 Thank you!
