@@ -14,7 +14,7 @@ tags:
   - investigations
   - general
 ---
-![welcome](/blog/assets/images/1/welcome.png)
+![welcome](/assets/images/1/welcome.png)
 
 # Welcome to Cyber5W: Your Gateway to the World of Digital Forensics!
 
