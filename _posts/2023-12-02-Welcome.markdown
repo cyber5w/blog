@@ -1,5 +1,5 @@
 ---
-title:  "Welcome to Cyber5W's New Blog"
+title:  "Welcome to C5W's New Blog"
 date:   2023-12-02 05:00:00 +0300
 header:
   teaser: "/assets/images/1/welcome.png"
