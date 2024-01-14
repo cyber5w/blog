@@ -1,4 +1,6 @@
 main:
+  - title: "Main"
+    url: https://www.cyber5w.com/
   - title: "Academy"
     url: https://academy.cyber5w.com/
   - title: "About"
