@@ -19,16 +19,16 @@ Greetings, cyber detectives and aspiring investigators! We are thrilled to have 
 We're a passionate team of digital forensics specialists on a mission to empower individuals and organizations in the fight against cybercrime. Knowledge is our weapon, and we're here to share it with you.
 
 # Fuel your forensic fire with:
-Online Courses: From basics to advanced techniques, learn at your own pace.
-Training Programs: Immerse yourself in hands-on experiences with expert guidance.
-On-Site Training: Tailored solutions brought directly to your team.
-Certifications: Validate your expertise with industry-recognized credentials.
+- Online Courses: From basics to advanced techniques, learn at your own pace.
+- Training Programs: Immerse yourself in hands-on experiences with expert guidance.
+- On-Site Training: Tailored solutions brought directly to your team.
+- Certifications: Validate your expertise with industry-recognized credentials.
 
 # Why choose Cyber5W?
-Expert-led Instruction: Learn from seasoned professionals with real-world experience.
-Engaging and Interactive: Say goodbye to dull lectures; embrace enjoyable learning.
-Personalized Approach: Tailored training to fit your needs and learning style.
-Career-focused: Gain the skills for exciting opportunities in digital forensics.
+- Expert-led Instruction: Learn from seasoned professionals with real-world experience.
+- Engaging and Interactive: Say goodbye to dull lectures; embrace enjoyable learning.
+- Personalized Approach: Tailored training to fit your needs and learning style.
+- Career-focused: Gain the skills for exciting opportunities in digital forensics.
 
 We hope this blog post serves as a warm welcome to Cyber5W. Feel free to adapt and personalize it further to reflect your unique academy's offerings and teaching philosophy. Remember, the most important thing is to convey your passion for digital forensics and your commitment to empowering the next generation of cybercrime fighters.
 
