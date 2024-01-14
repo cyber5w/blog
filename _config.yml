@@ -17,10 +17,10 @@ minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Cyber5W"
+title                    : "Cyber 5W Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Cyber5W"
+name                     : "Cyber 5W"
 description              : "DFIR Training"
 url                      : "https://blog.cyber5w.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
