@@ -11,6 +11,7 @@ tags:
   - threat-hunting
   - debugging
 ---
+![memory-forensics](/assets/images/5/C5W_Blog_MemoryForensics_01.png)
 
 At times, following a system compromise, it becomes crucial to retrieve forensically significant data. RAM, being volatile, has a transient nature. With each system reboot, the memory in RAM is cleared. Consequently, if a computer is breached and subsequently restarted, substantial information detailing the sequence of events leading to the system compromise may be lost.    
 
