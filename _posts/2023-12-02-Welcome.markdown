@@ -1,21 +1,12 @@
 ---
 title:  "Welcome to C5W's New Blog"
 classes: wide
-date:   2023-12-02 05:00:00 +0300
 header:
   teaser: "/assets/images/1/welcome.png"
 ribbon: DodgerBlue
 description: "Who we are?"
 categories: 
   - Forensic investigation
-tags:
-  - dfir
-  - malware
-  - blueteam
-  - debugging
-  - threat-hunting
-  - investigations
-  - general
 toc: true
 ---
 Greetings, cyber detectives and aspiring investigators! We are thrilled to have you step through the digital doors of Cyber5W, your one-stop shop for all things digital forensics. Whether you're a seasoned professional looking to sharpen your skills or a curious newcomer eager to unravel the mysteries of the digital world, we have something for you.
