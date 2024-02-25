@@ -1,5 +1,5 @@
 ---
-title:  "Pikabot Loader Detailed Analysis"
+title:  "Pikabot Detailed Analysis part1 'Loader'"
 date:   2024-02-25 05:00:00 +0300
 header:
   teaser: "/assets/images/pikabot/hash.png"
@@ -12,7 +12,6 @@ tags:
   - debugging
   - threat-hunting
   - investigations
-  - general
 ---
 # introduction
 
