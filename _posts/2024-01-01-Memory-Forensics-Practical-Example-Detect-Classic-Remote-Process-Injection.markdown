@@ -154,7 +154,6 @@ We hope this post spreads awareness to the blue teamers of this interesting and 
 [https://github.com/Velocidex/WinPmem](https://github.com/Velocidex/WinPmem)    
 [Cyber5W Intro to forensics](https://academy.cyber5w.com/collections/intro-to-forensics)    
 
-Thanks for your time happy hacking and good bye!   
-*PS. All drawings and screenshots are Cyber 5W*    
+Author: `Zhassulan Zhussupov`
 
 
