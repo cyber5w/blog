@@ -7,15 +7,20 @@ ribbon: DodgerBlue
 description: "Practical Example, Detect Classic Remote Process Injection"
 categories: 
   - Forensic investigation
-toc: true
+toc: truetoc: true
+
 ---
 ![memory-forensics](/assets/images/5/C5W_Blog_MemoryForensics_01.png)
+
+# Introduction
 
 At times, following a system compromise, it becomes crucial to retrieve forensically significant data. RAM, being volatile, has a transient nature. With each system reboot, the memory in RAM is cleared. Consequently, if a computer is breached and subsequently restarted, substantial information detailing the sequence of events leading to the system compromise may be lost.    
 
 ![mem](/assets/images/5/2024-01-02_13-37.png){:class="img-responsive"}    
 
 Today we will show in practice how to detect process injection via memory forensics. 
+
+# Sample OverView
 
 First of all, let's say we have a malware [sample](/assets/images/5/hack.exe.7z). For simulating process injection, just execute `notepad.exe` and run it in the victim's machine (Windows 7 x64 VM in my case):    
 
@@ -33,7 +38,7 @@ Additionally, following the execution of our malicious operation, we proceeded t
 >.\winpmem_v3.3.rc3.exe --output mem.raw
 ```
 
-### Analyse memory image
+# Analyzing the Memory Image
 
 For analysing memory image we use Volatility3 framework. First of all obtaining the OS. Acquiring details about the operating system from the memory dump is a straightforward process. You can utilize the `windows.info.Info` plugin to retrieve information about the captured memory dump:    
 
@@ -71,6 +76,8 @@ Note that, certain detection tools and antivirus engines have the capability to 
 
 ![mem](/assets/images/5/2024-01-02_11-20.png){:class="img-responsive"}        
 
+# Injection Analysis
+
 It's a popular trick of malware authors when use process injection technique:    
 
 ```cpp
@@ -93,6 +100,8 @@ Looks like the following assembly instructions involve system calls, accessing t
 0x2b0026:	mov	rsi, qword ptr ds:[rdx + 0x50]
 0x2b002b:	movzx	rcx, word ptr ds:[rdx + 0x4a]
 ```
+
+# Breaking Down the Assembly Instructions
 
 Let's break down what these instructions are doing:
 
@@ -131,6 +140,8 @@ The bytes provided, `fc 48 83 e4 f0`, represent the beginning of x86-64 shellcod
 `f0` - This byte is part of the x86-64 instruction sequence. It is often used as a prefix for LOCK-prefixed instructions.     
 
 The presence of shellcode-like characteristics, manipulation of system structures, and dynamic memory access raise suspicions about the code's intent.     
+
+# Dumping the Process Memory
 
 Ok, dump the process memory with `windows.memmap.Memmap` plugin:    
 
