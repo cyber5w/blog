@@ -12,7 +12,7 @@ main:
    # url: /categories/#offensive
   #- title: "CTF"
    # url: /categories/#ctf
-  - title: "All Categories"
+  - title: "Categories"
     url: /categories
   - title: "Academy"
     url: https://academy.cyber5w.com
