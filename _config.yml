@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Cyber5W"
+title                    : "Cyber 5W"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Cyber5W"
+name                     : "Cyber 5W"
 description              : "DFIR Training"
 url                      : "https://blog.cyber5w.com"
 baseurl                  : "/"
@@ -93,7 +93,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Cyber5W"
+  name             : "Cyber 5W"
   avatar           : "https://avatars.githubusercontent.com/u/80437140?s=328&v=32"
   bio              : "DFIR Training"
   email            :
@@ -125,7 +125,7 @@ footer:
       url: "https://www.linkedin.com/company/cyber5w/"
     - label: "Youtube"
       icon: "fab fa-youtube"
-      url: "https://youtube.com//@binaryz0ne?si=OmxMSkxtT6gf2qNz"
+      url: "https://youtube.com/@binaryz0ne?si=OmxMSkxtT6gf2qNz"
       # url:
 
 
