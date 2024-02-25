@@ -99,7 +99,7 @@ author:
   email            :
   links:
     - label: "Website"
-      icon: "fas fa-fw fas fa-house"
+      icon: "fa-solid fa-house"
       url: "https://www.cyber5w.com"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
