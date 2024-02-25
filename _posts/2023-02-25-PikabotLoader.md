@@ -155,7 +155,7 @@ After All these checks, we can find the sample uses `Remote Injection` to run a 
 
 In our case this process is "dllhost.exe", then "WriteProcessMemory" is used to inject code.
 
-![Error Loading](/assets/images/pikabot/Write.png)
+![Error Loading](/assets/images/pikabot/write.png)
 
 At the end the injected code has the core functionality of the Malware can be simply extracted by bypassing the previously mentioned techniques then putting a breakpoint at "WriteProcessMemory" and extracting the payload that will be injected.
 
