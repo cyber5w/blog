@@ -6,8 +6,8 @@ main:
     url: /categories/#forensic-investigation
  # - title: "vulnerability research"
   #  url: /categories/#vulnerability_research
-  - title: "Offensive"
-    url: /categories/#offensive
+  #- title: "Offensive"
+   # url: /categories/#offensive
   #- title: "CTF"
    # url: /categories/#ctf
   - title: "All Categories"

@@ -3,6 +3,8 @@ title:  "Memory Forensics - Practical Example, Detect Classic Remote Process Inj
 date:   2024-01-01 05:00:00 +0300
 header:
   teaser: "/assets/images/5/C5W_Blog_MemoryForensics_01.png"
+ribbon: DodgerBlue
+description: "Practical Example, Detect Classic Remote Process Injection"
 categories: 
   - Forensic investigation
 tags:
