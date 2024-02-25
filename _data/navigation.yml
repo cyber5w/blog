@@ -13,7 +13,7 @@ main:
   - title: "All Categories"
     url: /categories
   - title: "Academy"
-    url: 'https://academy.cyber5w.com'
+    url: https://academy.cyber5w.com
   - title: "About"
     url: /about/#about-us    
   
