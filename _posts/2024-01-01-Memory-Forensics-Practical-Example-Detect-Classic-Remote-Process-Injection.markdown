@@ -4,7 +4,7 @@ date:   2024-01-01 05:00:00 +0300
 header:
   teaser: "/assets/images/5/C5W_Blog_MemoryForensics_01.png"
 categories: 
-  - forensics
+  - Forensic investigation
 tags:
   - blueteam
   - malware

@@ -10,26 +10,25 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                    : "minimal-mistakes-jekyll"
-remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
-# remote_theme               : pages-themes/hacker@v0.2.0
-minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+#theme                  : "minimal-mistakes-jekyll"
+remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Cyber 5W Blog"
+title                    : "Cyber5W"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Cyber 5W"
-description              : "DFIR Training"
-url                      : "https://blog.cyber5w.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/" # the subpath of your site, e.g. "/blog"
+name                     : "Cyber5W"
+description              : "Malware Analysis RE"
+url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # "/assets/images/cat.png"
+logo                     : /assets/images/logo.png # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 170
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
@@ -40,7 +39,7 @@ comments:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : "dark" # "light" (default), "dark"
+    colorscheme          : # "light" (default), "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
@@ -52,8 +51,8 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
@@ -64,14 +63,14 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : "J3MnMF94zaZhTUoNtUiRt9cKsr7hiMyTxEdAvQ3GfmY"
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : "cyber5w"
+  username               :
 facebook:
   username               :
   app_id                 :
@@ -86,47 +85,63 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-207369386-2"
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
   name             : "Cyber5W"
-  avatar           : "https://avatars.githubusercontent.com/u/80437140?s=328&v=32"
-  bio              : "DFIR Training"
+  avatar           : /assets/images/logo.png # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Computer engineer interested in reverse engineering, forensics and malware analysis "
+  location         : "Egypt"
   email            :
   links:
+    - label: "About Me"
+      icon: "fas fa-fw fa-link"
+     # url: "https://amr-git-dot.github.io/aboutme/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:info @ cyber5w dot com"
+      url: "mailto:amr.ashraf.re@outlook.com"
     - label: "Twitter"
-      icon: "fab fa-twitter"
-      url: "https://twitter.com/cyber5w"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/Cyberagent101"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://www.facebook.com/profile.php?id=100076430379156&mibextid=ZbWKwL"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/amr-ashraf-93bb9a1ba/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/cyber5w"
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/company/cyber5w"
+      url: "https://github.com/amr-git-dot"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
-      icon: "fab fa-twitter"
-      url: "https://twitter.com/cyber5w"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/Cyberagent101"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/cyber5w/"
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/company/cyber5w/"
-    - label: "Youtube"
-      icon: "fab fa-youtube"
-      url: "https://youtube.com//@binaryz0ne?si=OmxMSkxtT6gf2qNz"
+      # url:
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
+      # url:
+    - label: "Bitbucket"
+      icon: "fab fa-fw fa-bitbucket"
+      # url:
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url:
 
 
 # Reading Files
@@ -194,8 +209,8 @@ sass:
 
 
 # Outputting
-# permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+permalink: /:categories/:title/
+paginate: 8 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -207,7 +222,6 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-remote-theme
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -265,6 +279,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
-      share: true
-      related: true
+      comments: false
+      share: false
+      related: false
