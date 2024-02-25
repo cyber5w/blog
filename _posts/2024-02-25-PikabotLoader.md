@@ -13,6 +13,7 @@ tags:
   - blueteam
   - threat-hunting
   - investigations
+toc: true
 ---
 # introduction
 

@@ -12,6 +12,7 @@ tags:
   - malware
   - threat-hunting
   - debugging
+toc: true
 ---
 ![memory-forensics](/assets/images/5/C5W_Blog_MemoryForensics_01.png)
 
