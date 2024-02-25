@@ -1,6 +1,7 @@
 ---
 title:  "Pikabot Loader Detailed Analysis"
 date:   2024-02-25 05:00:00 +0300
+classes: wide
 header:
   teaser: "/assets/images/pikabot/hash.png"
 ribbon: DodgerBlue
