@@ -98,6 +98,9 @@ author:
   bio              : "DFIR Training"
   email            :
   links:
+    - label: "Website"
+      icon: "fas fa-fw fas fa-house"
+      url: "https://www.cyber5w.com"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:info @ cyber5w dot com"
