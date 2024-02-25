@@ -2,7 +2,7 @@
 title: "About Us"
 excerpt: "Who are we"
 sitemap: true
-layout: single
+layout: archive
 permalink: /about-us.html
 ---
 
