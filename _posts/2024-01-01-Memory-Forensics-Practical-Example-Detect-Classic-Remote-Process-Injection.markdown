@@ -6,7 +6,7 @@ header:
 ribbon: DodgerBlue
 description: "Practical Example, Detect Classic Remote Process Injection"
 categories: 
-  - Forensic-investigations
+  - Forensic Investigations
 toc: truetoc: true
 ---
 
