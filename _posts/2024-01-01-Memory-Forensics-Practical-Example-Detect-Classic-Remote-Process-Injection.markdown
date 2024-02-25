@@ -5,8 +5,8 @@ header:
   teaser: "/assets/images/5/C5W_Blog_MemoryForensics_01.png"
 ribbon: DodgerBlue
 description: "Practical Example, Detect Classic Remote Process Injection"
-categories: 
-  - Forensic Investigations
+categories:
+  Forensic Investigations
 toc: truetoc: true
 ---
 
