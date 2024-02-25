@@ -2,8 +2,8 @@
 main:
   - title: "Malware Analysis"
     url: /categories/#malware-analysis
-  - title: "Forensic investigation"
-    url: /categories/#forensic-investigation
+  - title: "Forensic Investigations"
+    url: /categories/#forensic-investigations   
  # - title: "vulnerability research"
   #  url: /categories/#vulnerability_research
   #- title: "Offensive"
@@ -12,6 +12,10 @@ main:
    # url: /categories/#ctf
   - title: "All Categories"
     url: /categories
+  - title: "Academy"
+    url: 'https://academy.cyber5w.com'
+  - title: "About"
+    url: /about/#about-us    
   
   # - title: "Sample Collections"
   #   url: /collection-archive/
