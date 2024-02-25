@@ -2,7 +2,7 @@
 title:  "Pikabot Loader Detailed Analysis"
 date:   2024-02-25 05:00:00 +0300
 header:
-  teaser: "/assets/images/pikabot/hash.png"
+  teaser: "/blog/assets/images/pikabot/hash.png"
 ribbon: DodgerBlue
 description: "Part 1 of the analysis for Pikabot malware 'Loader Analysis'"
 categories: 
@@ -33,7 +33,7 @@ you can download it from [Malware Bazzar](https://bazaar.abuse.ch/sample/30db7ab
 
 The sample looks packed as we have a relatively high entropy.
 
-![Error Loading](/assets/images/pikabot/die.png)
+![Error Loading](/blog/assets/images/pikabot/die.png)
 
 So we can use a service like unpacme to unpack it, you can find the result [here](https://www.unpac.me/results/3c7fc1b6-62b1-4ea9-86a5-06b0a850a16d#/)
 
@@ -52,28 +52,28 @@ The Loader Code is considered somewhat a small code, we can get throw its code a
 
 We can see that the malware contains some `Junk Code` that doesn't make sense at the start, just pushing some value at the stack and never touching it.
 
-![Error Loading](/assets/images/pikabot/junk.png)
+![Error Loading](/blog/assets/images/pikabot/junk.png)
 
 The malware implements a series of checks after each function execution, although some functions will always return the same value, this is an obfuscation technique used to make the analysis harder.
 
 Let's get to the first function, which is used to resolve the address of `GetProcAddress` and `LoadLibrary`, using `API Hashing` Technique, those are the only two APIs that are resolved by hashes, then the rest of the APIs is resolved using them.
 
-![Error Loading](/assets/images/pikabot/hash.png)
+![Error Loading](/blog/assets/images/pikabot/hash.png)
 
 
 Through all the other functions, we can find several operations happening on stackstrings, which indicate that the sample uses `Encrypted Stack Strings" to hide its strings, those strings decrypted are mostly the APIs to be resolved, and a little of other stuff.
 
-![Error Loading](/assets/images/pikabot/dec.png)
+![Error Loading](/blog/assets/images/pikabot/dec.png)
 
 Through the code we can find it's using different keys and different operations, this may make the automatic extraction of the strings harder.
 
 An easy way of doing that is by using a debugger.
 
-![Error Loading](/assets/images/pikabot/debug.png)
+![Error Loading](/blog/assets/images/pikabot/debug.png)
 
 We can see the malware uses an Anti-Debugging technique by using "INT 0x2D" instruction, this instruction is used to raise an exception for breakpoint, If we are in the debugger no exception will be generated, before that the malware registers an exception handler, this way the attacker know that we are in a debugger if the Custom Handler didn't execute.
 
-![Error Loading](/assets/images/pikabot/exc.png)
+![Error Loading](/blog/assets/images/pikabot/exc.png)
 
 To continue our analysis easily I wrote this small template of code to decode these stack strings, just copy the stack variables in the code and change the key and the operation variables.
 
@@ -114,48 +114,48 @@ else:
     print(result)  
 ```
 
-![Error Loading](/assets/images/pikabot/scr.png)
-![Error Loading](/assets/images/pikabot/try.png)
+![Error Loading](/blog/assets/images/pikabot/scr.png)
+![Error Loading](/blog/assets/images/pikabot/try.png)
 
 we can also use emulation, but that is what came to my mind first.
 
 The next function is doing the same Anti-Debug Technique this time using `_debugbreak`.
 
-![Error Loading](/assets/images/pikabot/break.png)
+![Error Loading](/blog/assets/images/pikabot/break.png)
 
 After that, a series of debug checks with simple techniques, by Checking the BeingDebugged member of the PEB, checking if a remote debugger is attached, and checking again the BeingDebugged flag but using an API this time not manual parsing.
 
-![Error Loading](/assets/images/pikabot/checks.png)
+![Error Loading](/blog/assets/images/pikabot/checks.png)
 
 Another Anti-Sandbox technique is using `Beep` Api which is often passed by sandboxes and AVs to save time during the behavioral analysis as it takes a large time delay to finish execution.
 
-![Error Loading](/assets/images/pikabot/beep.png)
+![Error Loading](/blog/assets/images/pikabot/beep.png)
 
 Another Anti-Debugging check used also is `NtGlobalFlag` check, this value should be zero if no debugger is attached.
 
-![Error Loading](/assets/images/pikabot/glob.png)
+![Error Loading](/blog/assets/images/pikabot/glob.png)
 
 We can find another good anti-debugging technique also, which is using `OutputDebugString`, but who this work?!
 
 the malware starts by setting an error code and then calling "OutputDebugString" which is used to send messages to the debugger console, if no debugger is attached this will result in a specific error code, the malware then checks if the last error code isn't changed, that means no error resulted from "OutputDebugString" and it's running in a debugger.
 
-![Error Loading](/assets/images/pikabot/deb.png)
+![Error Loading](/blog/assets/images/pikabot/deb.png)
 
 Also, I noticed that the malware uses Anti-Sandbox technique by enumerating files or environment variables that don't exist, and if something is returned that will be an indicator of a sandbox, as sandboxes more often emulate everything the analyzed sample wants to make it execute as much code as possible but some malwares like this uses that feature against them.  
 
-![Error Loading](/assets/images/pikabot/random.png)
+![Error Loading](/blog/assets/images/pikabot/random.png)
 
 Also, we can find the malware uses another Anti-Analysis technique by using `GetWriteWatch` API to watch if the memory content is modified more than expected.
 
-![Error Loading](/assets/images/pikabot/watch.png)
+![Error Loading](/blog/assets/images/pikabot/watch.png)
 
 After All these checks, we can find the sample uses `Remote Injection` to run a new process and inject the final payload into that process.
 
-![Error Loading](/assets/images/pikabot/create.png)
+![Error Loading](/blog/assets/images/pikabot/create.png)
 
 In our case this process is "dllhost.exe", then "WriteProcessMemory" is used to inject code.
 
-![Error Loading](/assets/images/pikabot/write.png)
+![Error Loading](/blog/assets/images/pikabot/write.png)
 
 At the end the injected code has the core functionality of the Malware can be simply extracted by bypassing the previously mentioned techniques then putting a breakpoint at "WriteProcessMemory" and extracting the payload that will be injected.
 
