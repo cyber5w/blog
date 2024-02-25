@@ -1,6 +1,5 @@
 ---
 title:  "Pikabot Loader Detailed Analysis"
-date:   2024-02-25 05:00:00 +0300
 classes: wide
 header:
   teaser: "/assets/images/pikabot/hash.png"
@@ -8,12 +7,6 @@ ribbon: DodgerBlue
 description: "Part 1 of the analysis for Pikabot malware 'Loader Analysis'"
 categories: 
   - Malware Analysis
-tags:
-  - dfir
-  - malware
-  - blueteam
-  - threat-hunting
-  - investigations
 toc: true
 ---
 # introduction
@@ -58,7 +51,7 @@ We can see that the malware contains some `Junk Code` that doesn't make sense at
 
 The malware implements a series of checks after each function execution, although some functions will always return the same value, this is an obfuscation technique used to make the analysis harder.
 
-Let's get to the first function, which is used to resolve the address of `GetProcAddress` and `LoadLibrary`, using `API Hashing` Technique, those are the only two APIs that are resolved by hashes, then the rest of the APIs is resolved using them.
+Let's get to the first function, which is used to resolve the address of `GetProcAddress` and `LoadLibrary`, using `API Hashing` Technique, those are the only two APIs that are resolved by hashes, then the rest of the APIs are resolved using them.
 
 ![Error Loading](/assets/images/pikabot/hash.png)
 
@@ -73,7 +66,7 @@ An easy way of doing that is by using a debugger.
 
 ![Error Loading](/assets/images/pikabot/debug.png)
 
-We can see the malware uses an Anti-Debugging technique by using "INT 0x2D" instruction, this instruction is used to raise an exception for breakpoint, If we are in the debugger no exception will be generated, before that the malware registers an exception handler, this way the attacker know that we are in a debugger if the Custom Handler didn't execute.
+We can see the malware uses an Anti-Debugging technique by using "INT 0x2D" instruction, this instruction is used to raise an exception for breakpoint, If we are in the debugger no exception will be generated, before that the malware registers an exception handler, this way the attacker knows that we are in a debugger if the Custom Handler didn't execute.
 
 ![Error Loading](/assets/images/pikabot/exc.png)
 
