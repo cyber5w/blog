@@ -1,6 +1,6 @@
 ---
 title:  "Pikabot Loader Detailed Analysis"
-date:   2023-02-25 05:00:00 +0300
+date:   2024-02-25 05:00:00 +0300
 header:
   teaser: "/assets/images/pikabot/hash.png"
 categories: 
