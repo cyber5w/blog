@@ -6,14 +6,14 @@ header:
 ribbon: DodgerBlue
 description: "A reference for chromium based browsers investigation"
 categories: 
-  - Forensic Investigations
+  - Browser Forensics
 toc: true
 ---
 # Objectives
 
-In this blog post, We are going to focus on making our lives as DFIR engineers easier when dealing with browsers that keep records of almost everything that happens on them.
+In this blog post, we are going to focus on making our lives as DFIR analysts easier when dealing with browsers that keep records of almost everything that happens on them.
 
-we are going to catch the following traces (each one will be explained briefly in its section):
+We are going to catch the following traces (each one will be explained briefly in its section):
 
 - local state
 - History
