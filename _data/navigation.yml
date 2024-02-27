@@ -1,13 +1,9 @@
 # main links
 main:
-  - title: "Website"
+  - title: "Main"
     url: https://www.cyber5w.com/
-  - title: "Main Page"
-    url: https://blog.cyber5w.com/
- # - title: "Malware Analysis"
- #   url: /categories/#malware-analysis
- # - title: "Forensic Investigations"
- #   url: /categories/#forensic-investigations   
+  - title: "Blog"
+    url: https://blog.cyber5w.com/ 
   - title: "Categories"
     url: /categories
   - title: "Academy"
@@ -23,7 +19,10 @@ main:
   # - title: "Quick-Start Guide"
   # url: https://google.com
 
-
+ # - title: "Malware Analysis"
+ #   url: /categories/#malware-analysis
+ # - title: "Forensic Investigations"
+ #   url: /categories/#forensic-investigations  
 
  # - title: "vulnerability research"
   #  url: /categories/#vulnerability_research
