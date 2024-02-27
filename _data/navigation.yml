@@ -1,11 +1,13 @@
 # main links
 main:
-  - title: "Home"
+  - title: "Website"
+    url: https://www.cyber5w.com/
+  - title: "Main Page"
     url: https://blog.cyber5w.com/
-  - title: "Malware Analysis"
-    url: /categories/#malware-analysis
-  - title: "Forensic Investigations"
-    url: /categories/#forensic-investigations   
+ # - title: "Malware Analysis"
+ #   url: /categories/#malware-analysis
+ # - title: "Forensic Investigations"
+ #   url: /categories/#forensic-investigations   
   - title: "Categories"
     url: /categories
   - title: "Academy"
