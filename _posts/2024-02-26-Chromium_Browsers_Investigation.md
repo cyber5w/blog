@@ -1,5 +1,5 @@
 ---
-title:  "Chromium based browsers Investigation"
+title:  "Chromium Based Browsers Investigation"
 classes: wide
 header:
   teaser: "/assets/images/chromium/cover.png"
