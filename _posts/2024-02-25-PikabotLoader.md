@@ -6,8 +6,8 @@ header:
 ribbon: DodgerBlue
 description: "Part 1 of the analysis for Pikabot malware 'Loader Analysis'"
 categories: 
-  - Malware Analysis
-  - Reverse Engineering
+  - Malware-Analysis
+  - Reverse-Engineering
 toc: true
 ---
 # introduction
