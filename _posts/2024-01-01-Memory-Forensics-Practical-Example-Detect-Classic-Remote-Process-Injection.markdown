@@ -25,9 +25,9 @@ Today we will show in practice how to detect process injection via memory forens
 
 First of all, let's say we have a malware [sample](/images/5/hack.exe.7z). For simulating process injection, just execute `notepad.exe` and run it in the victim's machine (Windows 7 x64 VM in my case):    
 
-```powershell
+{% highlight ps1 %}
 .\hack.exe <notepad.exe PID>
-```
+{% endhighlight %}
 
 ![mem](/images/5/2024-01-02_11-04.png){:class="img-responsive"}    
 
@@ -35,17 +35,17 @@ As you can see, everything is work perfectly. Shellcode successfully injected.
 
 Additionally, following the execution of our malicious operation, we proceeded to download [winpmem](https://winpmem.velocidex.com/) onto the targeted Windows 7 x64 machine. Subsequently, execute:    
 
-```powershell
+{% highlight ps1 %}
 >.\winpmem_v3.3.rc3.exe --output mem.raw
-```
+{% endhighlight %}
 
 # Analyzing the Memory Image
 
 For analysing memory image we use Volatility3 framework. First of all obtaining the OS. Acquiring details about the operating system from the memory dump is a straightforward process. You can utilize the `windows.info.Info` plugin to retrieve information about the captured memory dump:    
 
-```bash
+{% highlight bash %}
 python3 ./volatility3/vol.py -f ./mem.raw windows.info.Info
-```
+{% endhighlight %}
 
 ![mem](/images/5/2024-01-02_11-16.png){:class="img-responsive"}    
 
@@ -53,9 +53,9 @@ python3 ./volatility3/vol.py -f ./mem.raw windows.info.Info
 
 Following that, the `windows.pslist.PsList` plugin had been used to examine the processes that were active on the compromised computer during the memory capture:    
 
-```bash
+{% highlight bash %}
 python3 ./volatility3/vol.py -f ./mem.raw windows.pslist.PsList
-```
+{% endhighlight %}
 
 ![mem](/images/5/2024-01-02_11-16_1.png){:class="img-responsive"}        
 
@@ -63,9 +63,9 @@ python3 ./volatility3/vol.py -f ./mem.raw windows.pslist.PsList
 
 Looking at the list, `PID 1363` is `notepad.exe`, which is our victim process. Let's go to find injected code to this process. For finding hidden and injected code, just run:    
 
-```bash
+{% highlight bash %}
 python3 ./volatility3/vol.py -f ./mem.raw windows.malfind.Malfind
-```
+{% endhighlight %}
 
 ![mem](/images/5/2024-01-02_11-19.png){:class="img-responsive"}        
 
@@ -81,10 +81,10 @@ Note that, certain detection tools and antivirus engines have the capability to 
 
 It's a popular trick of malware authors when use process injection technique:    
 
-```cpp
+{% highlight cpp %}
 //allocate memory buffer for remote process
 remoteBuffer = VirtualAllocEx(processHandle, NULL, payloadSize, (MEM_RESERVE | MEM_COMMIT), PAGE_EXECUTE_READWRITE);
-```
+{% endhighlight %}
 
 Let's look at the `notepad.exe` process. The provided memory block shows a suspicious and potentially malicious code snippet. Why?
 
@@ -146,9 +146,9 @@ The presence of shellcode-like characteristics, manipulation of system structure
 
 Ok, dump the process memory with `windows.memmap.Memmap` plugin:    
 
-```powershell
+{% highlight ps1 %}
 python3 ./volatility3/vol.py -f ./mem.raw --output-dir ./dump/ windows.memmap.Memmap --pid 1968 --dump
-```
+{% endhighlight %}
 
 ![mem](/images/5/2024-01-02_12-02.png){:class="img-responsive"}        
 

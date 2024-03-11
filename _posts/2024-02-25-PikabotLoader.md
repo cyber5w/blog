@@ -74,7 +74,7 @@ We can see the malware uses an Anti-Debugging technique by using "INT 0x2D" inst
 
 To continue our analysis easily I wrote this small template of code to decode these stack strings, just copy the stack variables in the code and change the key and the operation variables.
 
-```py
+{% highlight py %}
 
 v29 = 0xE9E7DFCC;
 v30 = 0xDFD0DFF0;
@@ -109,7 +109,7 @@ elif all(isinstance(byte, int) for byte in result):
     print("".join([chr(byte) for byte in result]))  
 else:
     print(result)  
-```
+{% endhighlight %}
 
 ![Error Loading](/images/pikabot/scr.png)
 ![Error Loading](/images/pikabot/try.png)

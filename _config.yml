@@ -3,7 +3,7 @@
 title: Cyber 5W
 logo: # You can add own logo. For example '/images/logo.png'.
 description: DFIR Training .
-baseurl: "/" # The subpath of your site, e.g. /blog
+baseurl: "/blog" # The subpath of your site, e.g. /blog
 url: "https://blog.cyber5w.com" # The base hostname & protocol for your site, e.g. http://example.com
 
 
