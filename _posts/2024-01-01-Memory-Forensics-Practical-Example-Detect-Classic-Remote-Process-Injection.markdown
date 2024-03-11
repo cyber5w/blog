@@ -1,8 +1,9 @@
 ---
+layout: post
 title:  "Memory Forensics - Practical Example, Detect Classic Remote Process Injection"
 classes: wide
 header:
-  teaser: "/assets/images/5/C5W_Blog_MemoryForensics_01.png"
+  teaser: "/images/5/C5W_Blog_MemoryForensics_01.png"
 ribbon: DodgerBlue
 description: "Practical Example, Detect Classic Remote Process Injection"
 categories:
@@ -10,25 +11,25 @@ categories:
 toc: true
 ---
 
-![memory-forensics](/assets/images/5/C5W_Blog_MemoryForensics_01.png)
+![memory-forensics](/images/5/C5W_Blog_MemoryForensics_01.png)
 
 # Introduction
 
 At times, following a system compromise, it becomes crucial to retrieve forensically significant data. RAM, being volatile, has a transient nature. With each system reboot, the memory in RAM is cleared. Consequently, if a computer is breached and subsequently restarted, substantial information detailing the sequence of events leading to the system compromise may be lost.    
 
-![mem](/assets/images/5/2024-01-02_13-37.png){:class="img-responsive"}    
+![mem](/images/5/2024-01-02_13-37.png){:class="img-responsive"}    
 
 Today we will show in practice how to detect process injection via memory forensics. 
 
 # Sample OverView
 
-First of all, let's say we have a malware [sample](/assets/images/5/hack.exe.7z). For simulating process injection, just execute `notepad.exe` and run it in the victim's machine (Windows 7 x64 VM in my case):    
+First of all, let's say we have a malware [sample](/images/5/hack.exe.7z). For simulating process injection, just execute `notepad.exe` and run it in the victim's machine (Windows 7 x64 VM in my case):    
 
 ```powershell
 .\hack.exe <notepad.exe PID>
 ```
 
-![mem](/assets/images/5/2024-01-02_11-04.png){:class="img-responsive"}    
+![mem](/images/5/2024-01-02_11-04.png){:class="img-responsive"}    
 
 As you can see, everything is work perfectly. Shellcode successfully injected.    
 
@@ -46,9 +47,9 @@ For analysing memory image we use Volatility3 framework. First of all obtaining 
 python3 ./volatility3/vol.py -f ./mem.raw windows.info.Info
 ```
 
-![mem](/assets/images/5/2024-01-02_11-16.png){:class="img-responsive"}    
+![mem](/images/5/2024-01-02_11-16.png){:class="img-responsive"}    
 
-![mem](/assets/images/5/2024-01-02_11-15.png){:class="img-responsive"}    
+![mem](/images/5/2024-01-02_11-15.png){:class="img-responsive"}    
 
 Following that, the `windows.pslist.PsList` plugin had been used to examine the processes that were active on the compromised computer during the memory capture:    
 
@@ -56,9 +57,9 @@ Following that, the `windows.pslist.PsList` plugin had been used to examine the 
 python3 ./volatility3/vol.py -f ./mem.raw windows.pslist.PsList
 ```
 
-![mem](/assets/images/5/2024-01-02_11-16_1.png){:class="img-responsive"}        
+![mem](/images/5/2024-01-02_11-16_1.png){:class="img-responsive"}        
 
-![mem](/assets/images/5/2024-01-02_11-18.png){:class="img-responsive"}        
+![mem](/images/5/2024-01-02_11-18.png){:class="img-responsive"}        
 
 Looking at the list, `PID 1363` is `notepad.exe`, which is our victim process. Let's go to find injected code to this process. For finding hidden and injected code, just run:    
 
@@ -66,7 +67,7 @@ Looking at the list, `PID 1363` is `notepad.exe`, which is our victim process. L
 python3 ./volatility3/vol.py -f ./mem.raw windows.malfind.Malfind
 ```
 
-![mem](/assets/images/5/2024-01-02_11-19.png){:class="img-responsive"}        
+![mem](/images/5/2024-01-02_11-19.png){:class="img-responsive"}        
 
 The output contains a list of processes that Volatility suspects may contain injected code based on the permissions, header information displayed in hex, and some extracted assembly code. However, it should be noted that a process's inclusion in the list does not necessarily indicate that it is entirely malicious or the target process for injection.     
 
@@ -74,7 +75,7 @@ What do we see here? We see that several memory areas of different processes hav
 
 Note that, certain detection tools and antivirus engines have the capability to identify this memory area due to its unusual nature. It becomes conspicuous as the process requires memory that possesses simultaneous attributes of being readable, writable, and executable.    
 
-![mem](/assets/images/5/2024-01-02_11-20.png){:class="img-responsive"}        
+![mem](/images/5/2024-01-02_11-20.png){:class="img-responsive"}        
 
 # Injection Analysis
 
@@ -87,7 +88,7 @@ remoteBuffer = VirtualAllocEx(processHandle, NULL, payloadSize, (MEM_RESERVE | M
 
 Let's look at the `notepad.exe` process. The provided memory block shows a suspicious and potentially malicious code snippet. Why?
 
-![mem](/assets/images/5/2024-01-03_11-22.png){:class="img-responsive"}        
+![mem](/images/5/2024-01-03_11-22.png){:class="img-responsive"}        
 
 First of all, the code appears to be position-independent, as evident from the relative jumps (`jmp`) and calls (`call`). This is a common characteristic of injected or shellcode-like structures. Also, the code modifies the stack pointer (`rsp`) to align it to a `16-byte` boundary. A series of register pushes (`push`) suggests the preservation of certain register values before making function calls.     
 
@@ -125,7 +126,7 @@ The final indicator is `fc 48 81` this is msfvenom shellcode bytes:
 
 As you can see, we found memory section where `hack.exe` injected payload `fc 48 81....` to `notepad.exe`.    
 
-![mem](/assets/images/5/2024-01-02_11-19_1.png)    
+![mem](/images/5/2024-01-02_11-19_1.png)    
 
 The bytes provided, `fc 48 83 e4 f0`, represent the beginning of x86-64 shellcode generated by the Metasploit Framework's `msfvenom` tool. Let's break down what each of these bytes represents:
 
@@ -149,11 +150,11 @@ Ok, dump the process memory with `windows.memmap.Memmap` plugin:
 python3 ./volatility3/vol.py -f ./mem.raw --output-dir ./dump/ windows.memmap.Memmap --pid 1968 --dump
 ```
 
-![mem](/assets/images/5/2024-01-02_12-02.png){:class="img-responsive"}        
+![mem](/images/5/2024-01-02_12-02.png){:class="img-responsive"}        
 
 Finally, if we search our bytes `fc 48 81 e4`:    
 
-![mem](/assets/images/5/2024-01-02_12-40.png){:class="img-responsive"}        
+![mem](/images/5/2024-01-02_12-40.png){:class="img-responsive"}        
 
 we found our payload bytes.    
 
