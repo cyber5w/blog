@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "Memory Forensics - Practical Example, Detect Classic Remote Process Injection"
-classes: wide
 image: "/images/5/C5W_Blog_MemoryForensics_01.png"
-ribbon: DodgerBlue
 description: "Practical Example, Detect Classic Remote Process Injection"
 tags: [Memory-Forensics]
-toc: true
 ---
 
 ![memory-forensics](/images/5/C5W_Blog_MemoryForensics_01.png)

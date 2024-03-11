@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "Chromium Based Browsers Investigation"
-classes: wide
 image: "/images/chromium/cover.png"
-ribbon: DodgerBlue
 description: "A reference for chromium based browsers investigation"
 tags: [Browser-Forensics] 
-toc: true
 ---
 # Objectives
 
