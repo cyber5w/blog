@@ -6,7 +6,7 @@ header:
 ribbon: DodgerBlue
 description: "Practical Example, Detect Classic Remote Process Injection"
 categories:
-  - Memory Forensics
+  - Memory-Forensics
 toc: true
 ---
 
