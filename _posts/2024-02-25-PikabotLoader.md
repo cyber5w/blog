@@ -2,13 +2,11 @@
 layout: post
 title:  "Pikabot Loader Detailed Analysis"
 classes: wide
-header:
-  teaser: "/images/pikabot/hash.png"
+image: "/images/pikabot/hash.png"
 ribbon: DodgerBlue
 description: "Part 1 of the analysis for Pikabot malware 'Loader Analysis'"
-categories: 
-  - Malware-Analysis
-  - Reverse-Engineering
+
+tags: [Malware-Analysis, Reverse-Engineering ] 
 toc: true
 ---
 # introduction
