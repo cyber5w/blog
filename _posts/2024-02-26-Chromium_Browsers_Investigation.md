@@ -6,7 +6,7 @@ header:
 ribbon: DodgerBlue
 description: "A reference for chromium based browsers investigation"
 categories: 
-  - Browser Forensics
+  - Browser-Forensics
 toc: true
 ---
 # Objectives
