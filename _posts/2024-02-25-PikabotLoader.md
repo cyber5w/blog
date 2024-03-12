@@ -3,7 +3,7 @@ layout: post
 title:  "Pikabot Loader Detailed Analysis"
 image: "/images/pikabot/hash.png"
 description: "Part 1 of the analysis for Pikabot malware 'Loader Analysis'"
-tags: [Malware-Analysis, Reverse-Engineering ] 
+tags: [MalwareAnalysis, ReverseEngineering ] 
 ---
 # introduction
 

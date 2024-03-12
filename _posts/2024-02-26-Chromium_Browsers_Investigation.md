@@ -3,7 +3,7 @@ layout: post
 title:  "Chromium Based Browsers Investigation"
 image: "/images/chromium/cover.png"
 description: "A reference for chromium based browsers investigation"
-tags: [Browser-Forensics] 
+tags: [BrowserForensics] 
 ---
 # Objectives
 
