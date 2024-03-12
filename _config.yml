@@ -1,32 +1,32 @@
 #-------------------------------
 # General Site Settings
-title: Norlin
+title: Cyber 5W
 logo: # You can add own logo. For example '/images/logo.png'.
-description: Norlin – A Beautiful Dark Blog Theme for Jekyll.
-baseurl: "" # The subpath of your site, e.g. /blog
-url: "" # The base hostname & protocol for your site, e.g. http://example.com
+description: DFIR Training .
+baseurl: "/" # The subpath of your site, e.g. /blog
+url: "https://blog.cyber5w.com" # The base hostname & protocol for your site, e.g. http://example.com
 
 
 #-------------------------------
 # Author Settings
 author:
-  name: Robert Wilson
-  avatar: '/images/15.jpg'
+  name: Cyber 5W
+  avatar: "https://avatars.githubusercontent.com/u/80437140?s=328&v=32"
 
 
 #-------------------------------
 # Hero Settings
 hero:
-  title: Robert Wilson
-  description: Thoughts, stories and ideas.
-  image: '/images/01.jpg'
+  title: Cyber 5W
+  description: DFIR Training
+  image: "https://avatars.githubusercontent.com/u/80437140?s=328&v=32"
 
 
 #-------------------------------
 # Contact Settings
 contact:
-  email: your@email.com # Add your email for contact form
-  description: Norlin comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want. # Add a description of your form
+  email: info@cyber5w.com # Add your email for contact form
+  description: Contact us # Add a description of your form
 
 # NOTE
 # Norlin theme comes with a contact form built-in. You can use this form with Formspree (https://formspree.io/) service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.
@@ -37,14 +37,14 @@ contact:
 # Example of adding a new link to the footer - {icon: "ion-logo-github", link: "https://github.com"}
 # Other icons can be found at https://ionicons.com/v4/
 social:
-- {icon: "ion-logo-twitter", link: "https://twitter.com"}
-- {icon: "ion-logo-facebook", link: "https://facebook.com"}
-- {icon: "ion-logo-dribbble", link: "https://dribbble.com"}
-- {icon: "ion-logo-instagram", link: "https://instagram.com"}
-- {icon: "ion-logo-pinterest", link: "https://pinterest.com"}
-- {icon: "ion-logo-youtube", link: "https://youtube.com"}
-- {icon: "ion-logo-github", link: "https://github.com"}
-- {icon: "ion ion-logo-vimeo", link: "https://vimeo.com/"}
+- {icon: "ion-logo-twitter", link: "https://twitter.com/cyber5w"}
+#- {icon: "ion-logo-facebook", link: "https://facebook.com"}
+#- {icon: "ion-logo-dribbble", link: "https://dribbble.com"}
+#- {icon: "ion-logo-instagram", link: "https://instagram.com"}
+#- {icon: "ion-logo-pinterest", link: "https://pinterest.com"}
+- {icon: "ion-logo-youtube", link: "https://youtube.com/@binaryz0ne?si=OmxMSkxtT6gf2qNz"}
+- {icon: "ion-logo-github", link: "https://github.com/cyber5w"}
+#- {icon: "ion ion-logo-vimeo", link: "https://vimeo.com/"}
 
 
 #-------------------------------
