@@ -3,7 +3,7 @@ layout: post
 title:  "Chromium Based Browsers Investigation"
 image: "/images/chromium/cover.png"
 description: "A reference for chromium based browsers investigation"
-tags: [BrowserForensics] 
+tags: [Browser-Forensics] 
 ---
 # Objectives
 
@@ -62,7 +62,9 @@ here we can see stored the local time of the machine and the network time, this 
 
 Under profile, we can find a list of all profiles available on the browser and information about each one.
 
-    profiles are used on Chrome to separate the user experience for every person if multiple users are using the same browser.
+{% highlight text %}
+profiles are used on Chrome to separate the user experience for every person if multiple users are using the same browser.
+{% endhighlight %}
 
 the most important property is `active_time` which stores the last time the user used the browser.
 
@@ -92,8 +94,7 @@ let's take a look at important tables there.
 
 In `downloads` table we can see the downloaded content and where it has been downloaded.
 
-    Note:
-    "id" field is used to link multiple tables together.
+Note: "id" field is used to link multiple tables together.
 
 another table related to downloading artifacts is `downloads_url_chains` which is used to link a downloaded file with the download link.
 

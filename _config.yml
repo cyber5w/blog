@@ -2,9 +2,9 @@
 # General Site Settings
 title: Cyber 5W
 logo: "https://avatars.githubusercontent.com/u/80437140?s=328&v=32" # You can add own logo. For example '/images/logo.png'.
-description: THE ART OF DFIR TRAINING
-baseurl: "/" # The subpath of your site, e.g. /blog
-url: "https://blog.cyber5w.com" # The base hostname & protocol for your site, e.g. http://example.com
+description: The Art of DFIR Training
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "" # The base hostname & protocol for your site, e.g. http://example.com
 
 
 #-------------------------------
@@ -18,15 +18,15 @@ author:
 # Hero Settings
 hero:
   title: Cyber 5W
-  description: DFIR Training
-  image: "https://avatars.githubusercontent.com/u/80437140?s=328&v=32"
+  description: The Art of DFIR Training
+  image: "/images/norlinbkg.jpg"
 
 
 #-------------------------------
 # Contact Settings
 contact:
   email: info@cyber5w.com # Add your email for contact form
-  description: Contact us # Add a description of your form
+  description: Contact US # Add a description of your form
 
 # NOTE
 # Norlin theme comes with a contact form built-in. You can use this form with Formspree (https://formspree.io/) service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.
@@ -49,7 +49,7 @@ social:
 
 #-------------------------------
 # Comment Section (Disqus)
-disqus-identifier: anvodstudio-demo # Add your shortname for Disqus Comment. For example anvodstudio-demo
+# disqus-identifier: anvodstudio-demo # Add your shortname for Disqus Comment. For example anvodstudio-demo
 
 
 #-------------------------------
@@ -66,7 +66,7 @@ mailchimp-identifier: # Add your MailChimp form identifier. For example - blogen
 #-------------------------------
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /:title:output_ext
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -81,6 +81,7 @@ defaults:
       path: '_pages'
     values:
       permalink: /:basename:output_ext
+
 
 include:
   - _pages

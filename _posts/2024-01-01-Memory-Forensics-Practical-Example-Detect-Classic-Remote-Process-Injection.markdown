@@ -3,7 +3,7 @@ layout: post
 title:  "Memory Forensics - Practical Example, Detect Classic Remote Process Injection"
 image: "/images/5/C5W_Blog_MemoryForensics_01.png"
 description: "Practical Example, Detect Classic Remote Process Injection"
-tags: [MemoryForensics]
+tags: [Memory-Forensics]
 ---
 
 ![memory-forensics](/images/5/C5W_Blog_MemoryForensics_01.png)
