@@ -38,13 +38,15 @@ contact:
 # Other icons can be found at https://ionicons.com/v4/
 social:
 - {icon: "ion-logo-twitter", link: "https://twitter.com/cyber5w"}
-#- {icon: "ion-logo-facebook", link: "https://facebook.com"}
+- {icon: "ion-logo-facebook", link: "https://www.facebook.com/cyber5w/"}
 #- {icon: "ion-logo-dribbble", link: "https://dribbble.com"}
-#- {icon: "ion-logo-instagram", link: "https://instagram.com"}
+- {icon: "ion-logo-instagram", link: "https://www.instagram.com/cyber5w/"}
 #- {icon: "ion-logo-pinterest", link: "https://pinterest.com"}
 - {icon: "ion-logo-youtube", link: "https://youtube.com/@binaryz0ne?si=OmxMSkxtT6gf2qNz"}
 - {icon: "ion-logo-github", link: "https://github.com/cyber5w"}
 #- {icon: "ion ion-logo-vimeo", link: "https://vimeo.com/"}
+- {icon: "ion ion-logo-linkedin", link: "https://www.linkedin.com/company/cyber5w/"}
+
 
 
 #-------------------------------
