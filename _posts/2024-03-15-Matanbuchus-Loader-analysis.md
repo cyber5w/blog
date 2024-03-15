@@ -13,8 +13,8 @@ In this report, we will analyze the MATANBUCHUS loader, a C++ malware, to determ
 - Stack Strings
 - Checks number of running process
 - PEB Traversal
-- Anti-Sandbox technique
-- InMemory only execution
+- Anti-Sandbox techniques
+
 
 We'll start with resolving APIs and decoding the strings, then proceed through the loader's techniques.
 
