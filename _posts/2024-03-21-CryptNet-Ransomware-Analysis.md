@@ -96,15 +96,23 @@ The tool takes obfuscated .NET assemblies as input. These assemblies are typical
 
 **De4dot** can use many deobfuscation techniques like:
 
-Inline Methods: Some obfuscators relocate parts of a method to separate static methods and then call them. de4dot attempts to inline these methods to simplify the code.
-String and Constant Decryption: It can decrypt strings and other constants statically or dynamically if they've been encrypted by the obfuscator.
-Symbol Renaming: Although symbol renaming is usually impossible to fully restore, de4dot attempts to rename symbols to more human-readable names.
-Method and Resource Decryption: It can decrypt methods, resources, and embedded files encrypted by the obfuscator.
-Control Flow Deobfuscation: de4dot reverses modifications to IL code made by obfuscators, restoring logical control flow.
-Class Field Restoration: If obfuscators move fields from one class to another, de4dot attempts to restore them.
-PE to .NET Conversion: It can convert a PE executable wrapped around a .NET assembly back to a pure .NET assembly.
-Error Correction: de4dot fixes some errors introduced by buggy obfuscators, making the code verifiable again.
-Other Techniques: It removes junk classes, tamper detection code, anti-debugging code, and can devirtualize virtualized code.
+- Inline Methods: Some obfuscators relocate parts of a method to separate static methods and then call them. de4dot attempts to inline these methods to simplify the code.
+
+- String and Constant Decryption: It can decrypt strings and other constants statically or dynamically if they've been encrypted by the obfuscator.
+
+- Symbol Renaming: Although symbol renaming is usually impossible to fully restore, de4dot attempts to rename symbols to more human-readable names.
+
+- Method and Resource Decryption: It can decrypt methods, resources, and embedded files encrypted by the obfuscator.
+
+- Control Flow Deobfuscation: de4dot reverses modifications to IL code made by obfuscators, restoring logical control flow.
+
+- Class Field Restoration: If obfuscators move fields from one class to another, de4dot attempts to restore them.
+
+- PE to .NET Conversion: It can convert a PE executable wrapped around a .NET assembly back to a pure .NET assembly.
+
+- Error Correction: de4dot fixes some errors introduced by buggy obfuscators, making the code verifiable again.
+
+- Other Techniques: It removes junk classes, tamper detection code, anti-debugging code, and can devirtualize virtualized code.
 
 We need to get tokens to pass them to **de4dot** for the decryption process
 
