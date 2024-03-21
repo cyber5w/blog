@@ -442,9 +442,9 @@ There is also a RSA Key
 ![](/images/cryptnet/image43.jpg)
 
 RSA Key:
-```
+{% highlight text %}
 <RSAKeyValue><Modulus>8TO8tQQRyFqQ0VShtSpLkDqtDVsrxS8SfdOsqRAj8mWF7sVoGzyZMcv501DF6iZUdKYsFDlaSMnuckG9+MJmD2ldZwU/0H6Xztkta1BkJWSO2qHg2JAGDp9ZsFGP1wDR9oRb1w7wtBe7Db3wf7q848+qKPWiTP/2R/jlR4evW73M65Jdo9uOzQnbmvw+blsloXeszuYlW2nCcwQ7WarzAK29UmM9ZHS0/lqzU0KHNU+DvyfGwmMJgtb2HN6GFGXq9Z0n3dNBCQVzdUl2G/7fLAMoFbJeExn5USZdFHr2ygheTilo/shmfq7tcPCZM8C4zqBtb0Nbct0f/M48+H920Q==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>
-```
+{% endhighlight %}
 
 Let's go to **smethod_0**
 
@@ -453,7 +453,7 @@ The malware iterates over each drive and avoids interference with essential syst
 ![](/images/cryptnet/image12.jpg)
 
 Paths to exclude
-```
+{% highlight text %}
 *windows.old
 *windows.old.old
 *amd
@@ -469,7 +469,8 @@ Paths to exclude
 *boot
 *games
 *msocache
-```
+{% endhighlight %}
+
 ## The main encryption method
 
 ![](/images/cryptnet/image13.jpg)
@@ -486,7 +487,7 @@ The malware will exclude these files to avoid interfering with critical system f
 
 ![](/images/cryptnet/image14.jpg)
 
-```
+{% highlight text %}
 iconcache.db
 autorun.inf
 thumbs.db
@@ -498,7 +499,8 @@ bootmgr.efi
 bootmgfw.efi
 desktop.ini
 ntuser.dat
-```
+{% endhighlight %}
+
 The ransomware note file name:
 
 ![](/images/cryptnet/image15.jpg)
@@ -525,7 +527,7 @@ Then Encrypts the input byte array using AES encryption.
 It Reads the entire file into a byte array.
 Initializes two strings (**text** and **text2**).
 
->The string **text** is used as a key for encryption, however, the deobfuscators we used incorrectly identified it as a constant string, rather than a randomly generated one.
+>The string **text** is used as a key for encryption, however, the deobfuscators we used incorrectly identified it as a constant string, rather than a randomly generated one, Don't ever blindly trust a tool.
 
 Then Converts these strings to byte arrays using ASCII encoding.
 
@@ -560,13 +562,14 @@ The malware deletes the shadow copies that can hinder the system's ability to re
 The malware author aims to hinder users' ability to restore their files without paying the ransom.
 
 ![](/images/cryptnet/image22.jpg)
-```
+
+{% highlight text %}
 vssadmin delete shadows /all /quiet & wmic shadowcopy delete
 
 bcdedit /set {default} bootstatuspolicy ignoreallfailures & bcdedit /set {default} recoveryenabled no
 
 wbadmin delete catalog -quiet
-```
+{% endhighlight %}
 
 The first one is used to delete Volume Shadow Copies (VSS) on a Windows system. VSS is a feature in Windows that allows for backup and snapshot capabilities. This command deletes all existing shadow copies silently without prompting for confirmation.
 
@@ -583,9 +586,9 @@ Within the nested foreach loop, it uses **Process.GetProcessesByName(processName
 ![](/images/cryptnet/image44.jpg)
 
 
-```
+{% highlight text %}
 sqlwriter sqbcoreservice VirtualBoxVM sqlagent sqlbrowser sqlservr code steam zoolz agntsvc firefoxconfig infopath synctime VBoxSVC tbirdconfig thebat thebat64 isqlplussvc mydesktopservice mysqld ocssd onenote mspub mydesktopqos CNTAoSMgr Ntrtscan vmplayer oracle outlook powerpnt wps xfssvccon ProcessHacker dbeng50 dbsnmp encsvc excel tmlisten PccNTMon mysqld-nt mysqld-opt ocautoupds ocomm msaccess msftesql thunderbird visio winword wordpad mbamtray
-```
+{% endhighlight %}
 
 Then it stops these services by iterating over each string (service name) in the array using a foreach loop.
 
@@ -593,7 +596,7 @@ Within the loop, it attempts to stop each service using the **ServiceController*
 
 ![](/images/cryptnet/image25.jpg)
 
-```
+{% highlight text %}
 *BackupExecAgentBrowser
 *veeam
 *VeeamDeploymentSvc
@@ -642,7 +645,7 @@ Within the loop, it attempts to stop each service using the **ServiceController*
 *VSNAPVSS
 *QBCFMonitorService
 *VeeamTransportSvc
-```
+{% endhighlight %}
 
 It's stopping backup services and antivirus software to prevent the user from
 - Restoring its files
@@ -657,13 +660,13 @@ A basic analysis of CryptNet has revealed that 54 out of 70 security vendors det
 
 Advanced analysis has uncovered the ransomware's functionalities, which include creating a mutex to prevent multiple instances, adding an ID to the ransom note to prevent the entire note from appearing during string examination, identifying file extensions for decryption, using RSA encryption for AES keys appended to encrypted files, deleting shadow copies to hinder file restoration, and terminating processes and services, including backup and antivirus services, to impede file restoration and malware detection.
 # IOCs
-```
+{% highlight text %}
 Sample:
     2e37320ed43e99835caa1b851e963ebbf153f16cbe395f259bd2200d14c7b775
 CryptNET leaks site:
     hxxp[://]cryptr3fmuv4di5uiczofjuypopr63x2gltlsvhur2ump4ebru2xd3yd[.]onion
 
-```
+{% endhighlight %}
 
 # References
 - https://research.openanalysis.net/dotnet/cryptnet/ransomware/2023/04/20/cryptnet.html
