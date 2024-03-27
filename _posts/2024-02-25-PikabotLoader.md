@@ -150,7 +150,7 @@ In our case this process is "dllhost.exe", then "WriteProcessMemory" is used to 
 
 At the end the injected code has the core functionality of the Malware can be simply extracted by bypassing the previously mentioned techniques then putting a breakpoint at "WriteProcessMemory" and extracting the payload that will be injected.
 
-# Summery
+# Summary
 
 In this blog post, we analyzed the new version of `Pikabot` loader which has many Anti-Analysis techniques like:
 
