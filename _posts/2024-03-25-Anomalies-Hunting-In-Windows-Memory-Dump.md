@@ -31,6 +31,8 @@ One of the most important tools in memory forensics is "Volatility" which is a p
 
 during this blog post, we will be dealing with "[volatility3](https://github.com/volatilityfoundation/volatility3)".
 
+You can find the practice material we are working on, in the "Material" section at the end.
+
 # Volatility
 
 ## image info
@@ -162,5 +164,15 @@ From there we can't tell all possible things that you can do as everything appli
 # Summery
 
 Every investigation has its objectives and your way deep inside the evidence files differs from case to case but once you know how to use your plugins to get what you want then you are fine, here we mentioned some important plugins that you will find yourself using in almost every memory forensic investigation like looking for suspicious parent-child relationships, network connections, execution command lines, referenced files within an executable, general way to spot anomalies, and how to make the process easier for you by using a modern tool like "MemProcFS".
+
+# Material
+
+The memory dump is splited into three parts.
+
+[Part 1](https://f002.backblazeb2.com/file/C5blogfiles/memorydump1/MemoryDump.raw.7z.001)
+
+[Part 2](https://f002.backblazeb2.com/file/C5blogfiles/memorydump1/MemoryDump.raw.7z.002)
+
+[Part 3](https://f002.backblazeb2.com/file/C5blogfiles/memorydump1/MemoryDump.raw.7z.003)
 
 `Author: Amr Ashraf`
