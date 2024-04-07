@@ -1129,12 +1129,12 @@ Gafgyt is a type of malware that waits for command and control (C&C) instruction
 
 # IOCs
 
-```
+{% highlight text %}
 C2 Server :
   91.92.244.11:19302
 Sha256:
   a9662b56d8409b4c022c5b3d3f0bcf00ea353220960191e3fe3cc239b874b3aa
-```
+{% endhighlight %}
 
 
 # References
