@@ -36,6 +36,10 @@
 
 }
 
+.blog-post-container {
+  display: flex; /* Enable flexbox layout */
+}
+
 .post-image {
   position: absolute;
   top: 0;
