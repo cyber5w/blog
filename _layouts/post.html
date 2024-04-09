@@ -61,15 +61,12 @@ layout: default
 <div class="container">
   <article class="post animate">
     
-    <div class="blog-post-container">
-      <div class="blog-content">
-        {{ content }}
-        </div>
-      <div class="blog-ad-container">
-        {% include advertisements.html %}
-        </div>
+    <div class="blog-ad-container">
+      {% include advertisements.html %}
     </div>
-   
+    <div class="post__content">
+      {{ content }}
+    </div>
 
     <div class="post__share">
       <div class="share__list">

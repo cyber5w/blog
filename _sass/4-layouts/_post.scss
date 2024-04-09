@@ -36,9 +36,6 @@
 
 }
 
-.blog-post-container {
-  display: flex; /* Enable flexbox layout */
-}
 
 .post-image {
   position: absolute;
@@ -170,6 +167,8 @@
     }
   }
 }
+
+
 
 /* Post Share */
 .post__share {
