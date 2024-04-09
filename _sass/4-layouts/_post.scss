@@ -1,7 +1,7 @@
 /* Post + Page */
 .post,
 .page {
-  position: relative;
+  position: left;
   max-width: 760px;
   margin: 0 auto;
 }
@@ -168,14 +168,7 @@
   }
 }
 
-.blog-ad-container {
-  margin-top: 40px; /* Adjust margin as needed */
-  text-align: center; /* Center the advertisement image */
-}
 
-.advertisement-image {
-  max-width: 100%; /* Ensure the advertisement image is responsive */
-}
 
 
 /* Post Share */
