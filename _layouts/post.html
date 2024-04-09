@@ -22,7 +22,7 @@ layout: default
               {% if words < 360 %}
                 1 min read
               {% else %}
-                {{ words | divided_by:180 }} min read
+                {{ words | divided_by:360 }} min read
               {% endif %}
               <time class="post__date"
                 datetime="{{ page.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}{{ page.date | date: date_format }}</time>
