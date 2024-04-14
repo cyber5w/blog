@@ -40,15 +40,16 @@ You can find the practice material we are working on, in the "Material" section 
 In `volatility2` you are required to use a specific profile when dealing with memory images but in `volatility3` the plugins themselves are dynamically identifying the profile.
 
 when using volatility you need to supply the following arguments:
-```
+
+{% highlight text %}
 python3 vol.py -f <MemoryImage> <Plugin>
-```
+{% endhighlight %}
 
 Let us start with a simple plugin that shows some info about the machine.
 
-```
+{% highlight text %}
 python3 .\vol.py -f D:\MemoryDump.mem windows.info
-```
+{% endhighlight %}
 
 ![Error loading](/images/wmforensics/info.png)
 
@@ -80,13 +81,13 @@ once we have a suspicious process we can move further and use other plugins to i
 
 `windows.cmdline` which is used to view the command line that executed any process which can have the process id you want to investigate as a parameter.
 
-        Note: you can get all parameters of a specific plugin by using "-h" after the plugin name.
+Note: you can get all parameters of a specific plugin by using "-h" after the plugin name.
 
 ![Error loading](/images/wmforensics/cmdline.png)
 
 Here we can see from the command line of "svchost" that it's running from "Documents" directory.
 
-        In some cases you may find results from volatility saying that information is swapped, Swapping is a mechanism used to use memory efficiently by moving unused content from memory to disk and getting it back once needed.
+In some cases you may find results from volatility saying that information is swapped, Swapping is a mechanism used to use memory efficiently by moving unused content from memory to disk and getting it back once needed.
 
 also, we can use `windows.handles` to get what handles our process referenced which can be helpful to find access to files or creating of a process.
 
@@ -127,8 +128,8 @@ Volatility is not limited to what we talked about as you can look at the tool he
 
 using the tool is really easy you just need to pass the memory image and a parameter called "forensic" which tells the tool to do an automatic forensic analysis of the image.
 
-    Note:
-        forensic results can take some time after mounting the image to be completed.
+Note:
+forensic results can take some time after mounting the image to be completed.
 
 
 ![Error loading](/images/wmforensics/mem.png)
