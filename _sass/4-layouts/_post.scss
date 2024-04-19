@@ -6,7 +6,6 @@
   margin: 0 60px;
 }
 
-/* Adjust the layout for smaller screens */
 @media only screen and (max-width: $tablet) {
   .col-8,
   .col-4 {
@@ -17,6 +16,7 @@
 .ad-box {
   margin-bottom: 40px; 
 }
+
 .ad-box img {
   max-width: 100%; 
   height: auto; 
