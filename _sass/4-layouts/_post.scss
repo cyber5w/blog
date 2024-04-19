@@ -6,6 +6,26 @@
   margin: 0 60px;
 }
 
+/* Adjust the layout for smaller screens */
+@media only screen and (max-width: $tablet) {
+  .col-8,
+  .col-4 {
+    width: 100%;
+  }
+}
+
+.ad-box {
+  margin-bottom: 40px; /* Adjust margin as needed */
+}
+
+.ad-box img {
+  max-width: 100%; /* Ensure the ad image doesn't overflow its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Make sure it's treated as a block element */
+  border-radius: 16px; /* Rounded corners for the ad box */
+  /* Add any additional styling you need for your ad */
+}
+
 .post-head {
   margin-bottom: 64px;
 

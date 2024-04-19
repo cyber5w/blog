@@ -2,7 +2,7 @@
 layout: post
 title:  "Hard disk structure and analysis"
 image: "/images/hard_disk/cover.png"
-description: "Looking at how Hard disks works and how to extend their investigation"
+description: "Looking at how Hard disks work and how to extend their investigation"
 tags: [Disk-Forensics] 
 ---
 # Introduction
