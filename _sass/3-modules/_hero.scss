@@ -24,7 +24,7 @@
 }
 
 .hero__image {
-  min-height: 664px;
+  min-height: 500px;
   user-select: none;
   background-color: $dark;
   img {
@@ -36,7 +36,7 @@
   }
 
   @media only screen and (max-width: $desktop) {
-    min-height: 620px;
+    min-height: 500px;
   }
 
   @media only screen and (max-width: $tablet) {
