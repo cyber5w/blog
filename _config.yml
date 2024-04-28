@@ -1,6 +1,6 @@
 #-------------------------------
 # General Site Settings
-title: Cyber 5W
+title: CYBER 5W
 logo: "/images/logo.png" # You can add own logo. For example '/images/logo.png'.
 description: The Art of DFIR Training
 baseurl: "" # The subpath of your site, e.g. /blog
