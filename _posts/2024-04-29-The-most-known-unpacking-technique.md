@@ -90,6 +90,6 @@ The malware is successfully unpacked
 
 {% highlight text %}
 SHA256:ab828f0e0555f88e3005387cb523f221a1933bbd7db4f05902a1e5cc289e7ba4
-{% highlight %}
+{% endhighlight %}
 
 This blog is authored by **Mostafa Farghaly(M4lcode)**.
