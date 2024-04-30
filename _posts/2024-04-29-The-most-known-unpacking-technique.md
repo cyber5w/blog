@@ -8,7 +8,7 @@ tags: [Malware-Analysis, Reverse-Engineering]
 
 # Objectives
 
-In this blog post, we will go through a famous packing technique which is the use of VirualAlloc and VirtualProtect to decrypt data in memory and execute it, and how to unpack it manually we are going to apply it to **Death Ransomware** malware
+In this blog post, we will go through a famous packing technique which is the use of VirualAlloc and VirtualProtect to decrypt data in memory and execute it, and how to unpack it manually, we are going to apply it to **Death Ransomware** malware
 
 # Introduction
 
