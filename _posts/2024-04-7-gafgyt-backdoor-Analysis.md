@@ -5,8 +5,6 @@ image: "/images/gafgyt/cover.png"
 description: "Analysis of Gafgyt Backdoor"
 tags: [Malware-Analysis, Reverse-Engineering] 
 ---
-Experience Level required: Begineer 
-
 # Objectives
 
 In this report, we will conduct a comprehensive analysis of Gafgyt, which is an ELF malware. Our aim is to examine the malware's capabilities and determine its functions:
