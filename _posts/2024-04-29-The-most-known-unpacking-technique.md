@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Manually Unpacking a Malware
+title:  Unpacking Malware Manually
 image: "/images/unpack/cover.png"
 description: "A Walkthrough of one of the most used unpacking techniques"
 tags: [Malware-Analysis, Reverse-Engineering] 
