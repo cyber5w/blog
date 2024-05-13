@@ -2,7 +2,8 @@
 layout: post
 title: "Analyzing Macro enabled Office Documents"
 image: "/images/msofficemacros/cover.png"
-description: "How to analyze Macro enabled Office Documents"
+description: "Learn how to analyze MS Office Macro enabled Documents, a step-by-step guide to identifying and reversing malicious macros, and how to use olevba and cyberchef to decode and analyze the macro code. Analyzing Macro enabled Office Documents, a comprehensive guide to malware analysis, reverse engineering, and forensic investigations."
+keywords: "Malware-Analysis, Reverse-Engineering, Macro enabled Office Documents, Office Document Analysis, Cyber 5W, Malware Analysis, Reverse Engineering, Gafgyt Backdoor Analysis, JavaScript Deobfuscation Techniques, Hard disk structure and analysis"
 tags: [Malware-Analysis, Reverse-Engineering] 
 ---
 Experience Level required: beginner 
