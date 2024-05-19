@@ -91,11 +91,13 @@ If you have other time stamps to rely on let’s, say you have the origination d
 # ANALYSIS BODY PART OF EMAIL
    
 ***Delivered To:*** This shows the email address of the person who was supposed to receive the email.
+
 ***Received By:*** This field tells us about the SMTP server that handled the email before it reached us. It includes:
 
 - IP address of the server
 - SMTP ID of the server
 - Date and time when the server received the email.
+
     
 ***X-Received:*** Some email systems use extra fields not defined in standard protocols. This field, starting with X often contains similar information to "Received By" including:
 
@@ -103,7 +105,9 @@ If you have other time stamps to rely on let’s, say you have the origination d
 - SMTP ID of the server
 - Date and time when the server received the email.
  
+
 ***ARC-Seal:*** This contains a signature that includes information from other ARC headers, helping to authenticate the email's path.
+
 ***ARC-Message-Signature:*** Similar to a DKIM signature, this captures details from the email header, like sender, recipient, subject, and body.
 
 ![error](/images/mail/ARC_Message_Signature.png)
