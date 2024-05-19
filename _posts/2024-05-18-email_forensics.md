@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Email Forensics"
+title:  Email Forensics
 image: "/images/mail/cover.png"
 description: "Looking at how you can perform an investigation and detect malicious Emails"
 tags: [Disk-Forensics] 
@@ -144,6 +144,7 @@ Here are the main tags found in a DKIM signature header:
 
 When DKIM, SPF, and DMARC checks pass, it indicates that the email source is legitimate and can be considered valid.
  
+
 ![error](/images/mail/DKIM_signature.png)
 
 
