@@ -16,14 +16,14 @@ In this blog, we will learn how to write a YARA Rule to detect different samples
 This section defines the metadata for the rule such as (the description of the rule, the author's name, the date of writing the rule, etc.)
 
 example
-```
+{% highlight text %}
 rule rule_name {
  meta:
  description = "detect a ransomware"
  author = "@Cyber5W"
  date = "6/2/2024"
 }
-```
+{% endhighlight %}
 
 # Strings Section
 
@@ -36,13 +36,13 @@ The strings should be unique in this malware family as much as you can to have f
 If there are common bytes in a malware family we can add it in our rule. If there are differences in some hexadecimal digits we can replace the different hexadecimal digits with "?"
 
 example
-```
+{% highlight text %}
  strings:
  $s1 = "himarkh.xyz" wide
  $s2 = "No system is safe" ascii
  $s3 = "vssadmin Delete Shadows /all /quiet" ascii
  $s4 = {6A 8B EC 6A FF 68 ?? ?? 42 00 64 A1 00 00 00 00 50 8? EC}
-```
+{% endhighlight %}
 
 # Conditions Section
 
@@ -55,7 +55,7 @@ We can use these operators (<, <=, >, >=, ,==, !=, and, or, etc.)
 If the malware imports a suspicious function we can use "pe.imports("dll name", "function name")" after importing "pe" at the beginning of the rule
 
 example
-```
+{% highlight text %}
 import "pe"
 rule rule_name {
  meta:
@@ -70,7 +70,7 @@ rule rule_name {
  condition:
  pe.imports("Shell32.dll", "ShellExecuteW") and 3 of them
 }
-```
+{% endhighlight %}
 ## Searching for sections
 
 If we want the rule to search for a section we can use
@@ -85,23 +85,23 @@ we can also check for the number of section
 
 If we observe that the sample size is less than 500KB, for example, we can add this to our rule's conditions to make it more specific.
 
-```
+{% highlight text %}
 rule rule_name {
  condition:
  filesize > 500KB
 }
-```
+{% endhighlight %}
 ## Checking bytes
 
 We can check the first bytes of the sample by using (uint16(offset number) == hex value)
 
 example
-```
+{% highlight text %}
 rule rule_name {
  condition:
  uint16(0) == 0x4d5a
 }
-```
+{% endhighlight %}
 
 # Writing a YARA Rule 1#
 
@@ -109,10 +109,10 @@ Now let's practice what we have learned and write a YARA Rule.
 
 I downloaded two samples of **Stealc** Stealer
 
-```
+{% highlight text %}
 07b3c4a47ec2b0e62681dd4de6866b809a82262c45360b24a19e47b2b17ed5c9
 716cf3d14949e2892a8a215c7d97ab4534a35af1ea09321fe8c8bae07ceb3dcf
-```
+{% endhighlight %}
 ![](/images/howtowriteyararule/image1.jpg)
 
 We can observe that the two samples are less than 250KB
@@ -128,7 +128,7 @@ Let's search for common bytes. I'll use **PEbear**
 
 This is our final YARA rule
 
-```
+{% highlight text %}
 rule stealc_stealer {
  meta:
  description = "detect Stealc Stealer"
@@ -143,7 +143,7 @@ rule stealc_stealer {
  condition:
  uint16(0) == 0x4d5a and filesize < 250KB and all of them
 }
-```
+{% endhighlight %}
 Let's test it
 
 ![](/images/howtowriteyararule/image5.jpg)
@@ -166,7 +166,7 @@ After analyzing the two samples by IDA we can observe that the dropper uses **Sh
 
 **ShellExecuteW** is a function imported from **Shell32.dll**
 
-```
+{% highlight text %}
 import "pe"
 rule ryuk {
  meta:
@@ -181,7 +181,7 @@ rule ryuk {
  condition:
  (1 of them and pe.imports("Shell32.dll", "ShellExecuteW")) or 2 of them
 }
-```
+{% endhighlight %}
 
 Let's test our rule in **hybrid analysis**
 
