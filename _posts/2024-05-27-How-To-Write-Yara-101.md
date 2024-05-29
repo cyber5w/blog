@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Writting YARA Rules"
+title:  "Writing YARA Rules"
 image: "/images/howtowriteyararule/cover.png"
 description: "How to write a good YARA Rule"
 tags: [Malware-Analysis, Reverse-Engineering] 
