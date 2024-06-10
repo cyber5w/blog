@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Windows Event Logs Analysis"
+image: "/images/evtpics/cover.png"
+description: "understanding how Event logs work in windows and how to analyze them"
+tags: [Disk-Forensics]  
+---
+
 # EVENT LOGS OVERVIEW 
 
  Windows operating systems maintain event logs that capture extensive information about the system, users, activities, and applications. These logs primarily help to inform administrators and users, categorized into five levels: information, warning, error, critical, and success/failure audit. For forensic analysis, event logs are an invaluable resource for reconstructing the sequence of events on a system.
