@@ -3,7 +3,7 @@ layout: post
 title:  "Google Drive Forensics"
 image: "/images/driveforensics/cover.png"
 description: "Understanding how To forensically analyze Google Drive"
-tags: [Disk-Forensics]  
+tags: [Cloud-Forensics]  
 ---
 
 # OverView
@@ -95,6 +95,6 @@ If you click on the three dots on the side you can choose to, restore the docume
 
 # Closing
 
-Thank you for spending your time reading this document! You might be asking yourself how this information helps me. Well, the importance of knowing this could help professionals catch students cheating in the act. Without having to higher expensive forensics examiners. As just one example :)
+Thank you for spending your time reading this document! You might be asking yourself how this information helps me. Well, the importance of knowing this could help professionals catch students cheating in the act. Without having to higher expensive forensics examiners. As just one example.
 
 Author: `Edward Griffith`
