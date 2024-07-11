@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Google Drive Forensics"
+title: "Google Drive Forensics"
 image: "/images/driveforensics/cover.png"
-description: "Understanding how To forensically analyze Google Drive"
-tags: [Cloud-Forensics]  
+description: "Understanding how to forensically analyze Google Drive"
+tags: [Cloud-Forensics]
 ---
+
 
 # OverView
 
