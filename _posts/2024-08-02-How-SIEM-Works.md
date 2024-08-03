@@ -36,7 +36,7 @@ For example, an error message on a server might be correlated with a blocked con
 
 - Event Management: SIEM solutions help prioritize and manage security events by distinguishing between genuine threats and false alarms. Modern SIEMs employ advanced analytics to improve the accuracy of threat detection, reducing the time analysts spend on false positives.
 
-![error](SIEM/siem_work_flow.png)
+![error](/images/SIEM/siem_work_flow.png)
 
 
 
@@ -74,7 +74,7 @@ To help answer these questions and provide context, we can toggle the following 
 
 event.dataset: zeek.http
 
-![error](SIEM/alert2_elastic.png)
+![error](/images/SIEM/alert2_elastic.png)
 
 
 - There are several critical pieces of information we can observe. We know that file downloads will have an event.action of **GET** and a successful `http.response.code` of `200`. Batch files may be unusual, so we should be on the lookout for `url.extensions` with the value bat. In case of extension obfuscation, we should also monitor for potential txt files. Most importantly, we need to determine if we are expecting any file transfers or downloads involving the specified `destination.ip` and `destination.port` values.
@@ -92,7 +92,7 @@ To answer these questions and provide context, we can toggle the following field
 
 `event.dataset: windows.sysmon_operational`
 
-![error](SIEM/alert2_elastic2.png)
+![error](/images/SIEM/alert2_elastic2.png)
 
 - The relevant results for our Alert Scenario have been reviewed. Tracing the sequence of events, we observe that a parent process `cmd.exe` executed the command line `..\..\testing.bat` (our dropper file).
 
@@ -117,12 +117,12 @@ To answer these questions and provide context, we can toggle the following field
 
 - After conducting the attack again, we observed that all four alerts were triggered and displayed in our Security Alerts Dashboard.
 
-![error](SIEM/alert_2_confirm.png)
+![error](/images/SIEM/alert_2_confirm.png)
 
 
 - A great feature of Elastic Cloud is its ability to visually analyze alerts and event timelines. In this case, we’re expanding our Potential Metasploit PowerShell Payload Observed alert, allowing us to click on each node to access more details and visually track the overall flow of events.
 
-![error](SIEM/alert2_analyze.png)
+![error](/images/SIEM/alert2_analyze.png)
 
 
 You can imagine what a SIEM solution can provide for you in terms of scale detection and hunting for anomalies around your environment from a centralized place, this can make your life as a security analyst much more easier. 
