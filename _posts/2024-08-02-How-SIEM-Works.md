@@ -126,3 +126,6 @@ To answer these questions and provide context, we can toggle the following field
 
 
 You can imagine what a SIEM solution can provide for you in terms of scale detection and hunting for anomalies around your environment from a centralized place, this can make your life as a security analyst much more easier. 
+
+
+This blog is authored by **Asem Ashraf**.
