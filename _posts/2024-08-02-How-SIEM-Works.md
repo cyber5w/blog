@@ -39,17 +39,6 @@ For example, an error message on a server might be correlated with a blocked con
 ![error](/images/SIEM/siem_work_flow.png)
 
 
-
-
-# Use Elastic Security for SIEM
-
-- This comprehensive guide to Elastic SIEM provided a detailed understanding of its features, components, and capabilities. By using Elastic SIEM, you can centralize security monitoring, analysis, and management across your organization, enhancing your ability to detect and respond to potential threats. 
-
-
-- Through the Elastic Stack’s integrations, you can easily add new data sources and visualize the collected data using built-in assets such as dashboards and visualizations. The Elastic Agent further simplifies data collection and security by consolidating multiple data collection functions into one agent. 
-
-
-
 # Scenario: Batch Files and Malicious Payloads 
 
 - Detection mechanisms will be set up to alert on the following: downloading batch files on unusual ports, PowerShell scripts being launched from batch files, batch files downloaded by PowerShell using the `Invoke-WebRequest` command, and command-line/PowerShell commands matching patterns found in malicious Metasploit payloads.
