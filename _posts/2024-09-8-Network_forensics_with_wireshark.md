@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Network Forensics With Wireshark"
+image: "/images/network_forensics_with_wireshark/cover.png"
+description: "Understanding how we can perform Forensics on network captures using Wireshark tool"
+tags: [SOC]
+---
 # What Is Network Forensics?
 
 Network forensics is a specialized field within cybersecurity focused on the monitoring, capturing, and analysis of network traffic to uncover and investigate security incidents or breaches.
