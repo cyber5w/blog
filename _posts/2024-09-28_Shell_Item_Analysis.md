@@ -33,37 +33,38 @@ From another viewpoint, shellbags are groups of special settings in a computer's
 ### Locating and Analyzing Shellbags
 
 USRCLASS.DAT File:
-	●	Path: `C:\Users\<Username>\AppData\Local\Microsoft\Windows`
-	●	Contains: User-specific settings and configuration details like desktop background and window size… etc.
+
+-  Path: `C:\Users\<Username>\AppData\Local\Microsoft\Windows`
+-  Contains: User-specific settings and configuration details like desktop background and window size… etc.
 
 Registry Hives:
-	●	Path: `USRCLASS.DAT\LocalSettings\Software\Microsoft\Windows\Shell\Bags`
-	●	Stores: Folder view settings as binary data.
+- Path: `USRCLASS.DAT\LocalSettings\Software\Microsoft\Windows\Shell\Bags`
+- Stores: Folder view settings as binary data.
 
 By examining the USRCLASS.DAT file and the Bags subkey, forensic investigators can learn about how files and folders have been accessed and reconstruct the file system activity.
 BagMRU Subkey:
-	●	Path: `USRCLASS.DAT\LocalSettings\Software\Microsoft\Windows\Shell\BagMRU`
-	●	Contains: Information about the most recently used (MRU) folders.
+-	Path: `USRCLASS.DAT\LocalSettings\Software\Microsoft\Windows\Shell\BagMRU`
+-	Contains: Information about the most recently used (MRU) folders.
 
 Examining the BagMRU subkey reveals the folders that have been used most recently, providing useful information about how files and folders are being used.
 
 
 ShellNoRoam Subkey:
-	●	Path: `USRCLASS.DAT\LocalSettings\Software\Microsoft\Windows\Shell\ShellNoRoam\Bags`
-	●	Stores: Folder view settings for a specific user profile without syncing between devices or profiles.
+-	Path: `USRCLASS.DAT\LocalSettings\Software\Microsoft\Windows\Shell\ShellNoRoam\Bags`
+-	Stores: Folder view settings for a specific user profile without syncing between devices or profiles.
 
 
 ### NTUSER.DAT File and Related Keys
 
 NTUSER.DAT File:
-	●	Path: `C:\Users\<Username>`
-	●	Contains: User-specific settings and configurations.
+-	Path: `C:\Users\<Username>`
+-	Contains: User-specific settings and configurations.
 
 Registry Paths:
-	●	`NTUSER.DAT\Software\Microsoft\Windows\Shell\Bags`
-	●	`NTUSER.DAT\Software\Microsoft\Windows\Shell\BagMRU`
-	●	`NTUSER.DAT\Software\Microsoft\Windows\ShellNoRoam\Bags`
-	●	`NTUSER.DAT\Software\Microsoft\Windows\ShellNoRoam\BagMRU`
+-	`NTUSER.DAT\Software\Microsoft\Windows\Shell\Bags`
+-	`NTUSER.DAT\Software\Microsoft\Windows\Shell\BagMRU`
+-	`NTUSER.DAT\Software\Microsoft\Windows\ShellNoRoam\Bags`
+-	`NTUSER.DAT\Software\Microsoft\Windows\ShellNoRoam\BagMRU`
 
 Examining the NTUSER.DAT file and its related parts helps us understand how a user's computer is used and set up, particularly looking at the folders they use most often.
 
@@ -97,22 +98,22 @@ These commands provide detailed information on BagPath, Slot, NodeSlot, MRUPosit
 # Recent Documents (LNK)
 
 Windows automatically creates these shortcuts when the user open, uses or creates a file in:
-	●	Win7-Win10: `C:\Users\\AppData\Roaming\Microsoft\Windows\Recent\`
-	●	Office: `C:\Users\\AppData\Roaming\Microsoft\Office\Recent\`
-	●	`HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs` 
-	●	`HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePidlMRU`
+-	Win7-Win10: `C:\Users\\AppData\Roaming\Microsoft\Windows\Recent\`
+-	Office: `C:\Users\\AppData\Roaming\Microsoft\Office\Recent\`
+-	`HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs` 
+-	`HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePidlMRU`
 
 When a folder is created, a link to the folder, to the parent folder, and the grandparent folder is also created.
 To inspect these files, you can use LinkParser.
 
 In this tools you will find 2 sets of timestamps:
 
- ● First Set:
+- First Set:
    1. FileModifiedDate
    2. FileAccessDate
    3. FileCreationDate
   
- ● Second Set:
+- Second Set:
    1. LinkModifiedDate
    2. LinkAccessDate
    3. LinkCreationDate.
