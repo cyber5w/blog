@@ -33,7 +33,6 @@ Download ALEAPP by navigating to the "Releases" column on the GitHub page, which
 
 ![Error loading](/images/mobile_forensics/Picture1.png)
 
-
 Figure 1: The "Releases" column
 
 The Windows GUI version 3.2.4 of ALEAPP will be used for this demonstration. All download types are available under the "Assets" section of the preferred software version. After downloading, extract the ZIP file.
